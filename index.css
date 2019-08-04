@@ -1,13 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,400,500,700&display=swap');
 
 * {
 	padding: 0;
 	margin: 0;
-	
 }
 
 body {
+	background: #000;
 	background: url('images/bg.jpg') ;
+	
 	height: 100vh;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -15,11 +16,18 @@ body {
 	font-family: 'Poppins', sans-serif;
 }	
 
-.container {
+.header-container {
 	display: flex;
-	background: rgba(255,255,255,.9);
+	background-image: linear-gradient( 114.9deg,  rgba(34,34,34,1) 8.3%, rgba(0,40,60,1) 41.6%, rgba(0,143,213,1) 93.4% );
+	/* background-image: linear-gradient( 135deg, #CE9FFC 10%, #7367F0 100%); */
 	justify-content: space-between;
-	padding-bottom: .5rem;
+	padding-bottom: 1rem;
+	padding-top: 3rem ;
+	text-transform: capitalize;
+	color: rgba(255,255,255,0.9);
+	font-weight: 400;
+	border-bottom: solid 1px rgba(255,255,255,1);
+	user-select: none;
 }
 
 .left-container {
@@ -32,12 +40,10 @@ body {
 	margin-right: 10px;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-end
+	justify-content: flex-end;
 }
 
 .todo-container {
-	
-	text-transform: capitalize;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
@@ -46,8 +52,107 @@ body {
 .headline {
 	font-size: 1.5rem;
 	margin-bottom: .2rem;
+	font-weight: 500;
 }
 
 .subheading {
 	font-size: 1rem;
+	font-weight: 200;
 }
+
+#add-todo {
+	background: rgba(255,255,255,0.2);
+	border-radius: 4px;
+	padding: 1rem;
+	border: white solid 1px;
+	transition: .4s;
+	
+}
+
+#add-todo:hover {
+	background-image: linear-gradient(to right, #EDE574 0%, #E1F5C4 51%, #EDE574 100%);
+	border: none;
+	cursor: pointer;
+	color: black;
+	font-weight: 500;
+	transition: .2s;
+	transform: translateY(-4px);
+	box-shadow: 4px 3px 4px rgba(237, 229, 116, 0.24);
+}
+
+#add-todo:active {
+	background-image: linear-gradient(to right, #EDE574 0%, #E1F5C4 51%, #EDE574 100%);
+	border: none;
+	cursor: pointer;
+	color: black;
+	font-weight: 500;
+	transition: .1s;
+	transform: translateY(-2px);
+}
+
+/* task input */
+.task-input {
+	/* background: blue; */
+	height: 2rem;
+	display: flex;
+	justify-content: center;
+	padding: 1rem  0;
+}
+
+
+
+.task-text-input {
+	all: unset;
+	background : rgba(255,255,255,0.6);
+	width: 25rem;
+	border-radius: 20px;
+	padding-left: 1.5rem;
+}
+
+
+/* todo items */
+
+.todos-container {
+	/* display: flex;
+	flex-direction: column; */
+}
+
+.todo-item {
+background: rgba(255,255,255,0.2);
+display: flex;
+justify-content: space-between;
+/* height: 2rem; */
+margin: 1rem 2rem;
+}
+
+
+
+.todo-item-left {
+	display: flex;
+	align-items: center;
+	/* justify-content: space-around */
+}
+
+.checkbox {
+	/* all: unset; */
+	/* border: red 1px solid */
+	margin: 0 1.5rem;
+}
+
+.todo-item-right {
+	display: flex;
+	align-items: center;
+}
+.delete {
+	color: red;
+	margin: 12px;
+}
+
+.change-text {
+	margin-right: 1rem;
+}
+
+
+
+
+

@@ -12,11 +12,11 @@
 </head>
 
 <body>
-	<div class="container">
+	<div class="header-container">
 		<div class="left-container">
 			<div class="todo-container">
 				<h1 class="headline">
-					<ion-icon name="home" style="margin-bottom: -4px"></ion-icon>
+					<ion-icon name="home" style="margin-bottom: -.1rem"></ion-icon>
 					today
 					<!-- kings and priests -->
 				</h1>
@@ -27,8 +27,77 @@
 
 		</div>
 		<div class="right-container">
-			add task
+			<div class="add-task-container" id="add-todo">
+				add task
+				<ion-icon name="add" style="margin-bottom: -.1rem;"></ion-icon>
+			</div>
+
 		</div>
+	</div>
+
+	<!-- task input -->
+	<div class="task-input">
+		<input type="text" class="task-text-input" placeholder="Enter task here" id="input">
+	</div>
+
+
+
+	<!-- todo container -->
+	<div class="todos-container" id="todos-container">
+
+
+		<div class="todo-item">
+
+			<div class="todo-item-left">
+				<input type="checkbox" class="checkbox">
+
+				<div class="text">do something</div>
+
+			</div>
+
+			<div class="todo-item-right">
+				<div class="change-text">edit</div>
+				<div class="delete">
+					<ion-icon name="trash"></ion-icon>
+				</div>
+			</div>
+		</div>
+
+		<div class="todo-item">
+
+				<div class="todo-item-left">
+					<input type="checkbox" class="checkbox">
+	
+					<div class="text">do something</div>
+	
+				</div>
+	
+				<div class="todo-item-right">
+					<div class="change-text">edit</div>
+					<div class="delete">
+						<ion-icon name="trash"></ion-icon>
+					</div>
+				</div>
+			</div>
+			<div class="todo-item">
+
+					<div class="todo-item-left">
+						<input type="checkbox" class="checkbox">
+		
+						<div class="text">do something</div>
+		
+					</div>
+		
+					<div class="todo-item-right">
+						<div class="change-text">edit</div>
+						<div class="delete">
+							<ion-icon name="trash"></ion-icon>
+						</div>
+					</div>
+				</div>
+
+
+		
 	</div>
 
 </body>
