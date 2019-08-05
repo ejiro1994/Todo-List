@@ -11,13 +11,38 @@ let input_box = document.getElementById('input')
 let createTask = () => {
 
 
-	let todo = `<div></div>`
+	let todo = document.createElement('div')
+	let task = input_box.value
+
+
+	let todo_html = `
+		<div class="todo-item-left">
+				<input type="checkbox" class="checkbox">
+
+				<div class="text">${task}</div>
+
+			</div>
+
+			<div class="todo-item-right">
+				<div class="change-text">edit</div>
+				<div class="delete">
+					<ion-icon name="trash"></ion-icon>
+				</div>
+			</div>
+	`
+
+
+	todo.innerHTML = todo_html
+
 	todo.className = 'todo-item'
 
 
-	let node = document.getElementById('todos-container').appendChild(todo)
+	 document.getElementById('todos-container').appendChild(todo)
 
-	
+
+	 input_box.value = ''
+	// console.log(todo)
+	// console.log(todo1)
 
 }
 
