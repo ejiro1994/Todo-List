@@ -1,52 +1,56 @@
-//today's date 
-let d = new Date()
-document.getElementById('date').innerHTML = d.toDateString()
 
-//todo logic
-let add_todo_button = document.getElementById('add-todo')
+let input = document.querySelector('.input')
+let list = document.querySelector('.list')
+let buttonAdd = document.querySelector('#add-todo')
 
 
-let input_box = document.getElementById('input')
+let addTodo = ()=> {
 
-let createTask = () => {
+	let div = document.createElement('div')
+	div.className = 'listItemDiv'
+	let newListItem = document.createElement('li')
+	newListItem.className = 'newListItem'
+	let text = document.createElement('p')
+	text.className = 'text'
+	text.innerHTML = input.value
+	let removeButton = document.createElement('button')
+	removeButton.innerHTML = "remove"
+	removeButton.className = 'removeButton'
+	let editButton = document.createElement('button')
+	editButton.innerHTML = "edit"
+	editButton.className = 'editButton'
 
+	let input2 = document.createElement('input')
+	input2.style.display = "none"
+	input2.className = 'input2'
 
-	let todo = document.createElement('div')
-	let task = input_box.value
+	newListItem.appendChild(div)
+	div.appendChild(text)
+	div.appendChild(input2)
+	div.appendChild(editButton)
+	div.appendChild(removeButton)
+	list.appendChild(newListItem)
 
-
-	let todo_html = `
-		<div class="todo-item-left">
-				<input type="checkbox" class="checkbox">
-
-				<div class="text">${task}</div>
-
-			</div>
-
-			<div class="todo-item-right">
-				<div class="change-text">edit</div>
-				<div class="delete">
-					<ion-icon name="trash"></ion-icon>
-				</div>
-			</div>
-	`
-
-
-	todo.innerHTML = todo_html
-
-	todo.className = 'todo-item'
-
-
-	 document.getElementById('todos-container').appendChild(todo)
+	console.log('hello')
 
 
-	 input_box.value = ''
-	// console.log(todo)
-	// console.log(todo1)
+	removeButton.addEventListener('click', (e)=>{
+		list.removeChild(e.target.parentNode.parentNode)
+	})
+
+	input.value = ''
+
+	editButton.addEventListener('click', ()=>{
+		input2.style.display = "block"
+		text.style.display = "none"
+	})
 
 }
 
 
-add_todo_button.addEventListener('click', function () {
-	createTask()
+buttonAdd.addEventListener( 'click', ()=> {
+	addTodo()
+
 })
+
+

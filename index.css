@@ -7,7 +7,7 @@
 
 body {
 	background: #000;
-	background: url('images/bg.jpg') ;
+	background: url('images/bg.png') ;
 	
 	height: 100vh;
 	background-position: center;
@@ -60,21 +60,26 @@ body {
 	font-weight: 200;
 }
 
+
+/* button */
 #add-todo {
-	background: rgba(255,255,255,0.2);
+	background-image: linear-gradient(to left, #EDE574 , #E1F5C4 , #EDE574);
 	border-radius: 4px;
 	padding: 1rem;
-	border: white solid 1px;
+	color: #000;
 	transition: .4s;
+	background-size: 800%;
 	
 }
 
 #add-todo:hover {
-	background-image: linear-gradient(to right, #EDE574 0%, #E1F5C4 51%, #EDE574 100%);
+	border: white solid 1px;
+	/* background-image: linear-gradient(to right, #EDE574 0%, #E1F5C4 51%, #EDE574 100%); */
+	background-position: right;
 	border: none;
 	cursor: pointer;
-	color: black;
-	font-weight: 500;
+	/* color: black; */
+	/* font-weight: 500; */
 	transition: .2s;
 	transform: translateY(-4px);
 	box-shadow: 4px 3px 4px rgba(237, 229, 116, 0.24);
@@ -101,7 +106,7 @@ body {
 
 
 
-.task-text-input {
+.input {
 	all: unset;
 	background : rgba(255,255,255,0.6);
 	width: 25rem;
@@ -112,10 +117,7 @@ body {
 
 /* todo items */
 
-.todos-container {
-	/* display: flex;
-	flex-direction: column; */
-}
+
 
 .todo-item {
 background: rgba(255,255,255,0.2);
@@ -123,6 +125,7 @@ display: flex;
 justify-content: space-between;
 /* height: 2rem; */
 margin: 1rem 2rem;
+border-radius:4px
 }
 
 
@@ -130,8 +133,8 @@ margin: 1rem 2rem;
 .todo-item-left {
 	display: flex;
 	align-items: center;
-	/* justify-content: space-around */
 }
+
 
 .checkbox {
 	/* all: unset; */
@@ -144,15 +147,39 @@ margin: 1rem 2rem;
 	align-items: center;
 }
 .delete {
-	color: red;
+	color: white;
 	margin: 12px;
 }
 
+
+.delete:hover {
+	color: red;
+	font-size: 1.5rem
+}
 .change-text {
 	margin-right: 1rem;
 }
 
 
+/* styled elements from javascript */
+.listItemDiv {
+
+}
+.newListItem {
+
+}
+.text {
+
+}
+.removeButton {
+
+}
+.editButton {
+
+}
+.input2 {
+	
+}
 
 
 
